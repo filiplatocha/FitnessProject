@@ -1,0 +1,40 @@
+
+th
+	{
+	font-weight: bold;
+	font-family: verdana;
+	font-size: 30px;
+	text-align:center;
+	border-color: black;
+	border-style: solid;
+	}
+#routine td
+	{
+	font-weight:bold;
+	text-align:center;
+	color: black;
+	border-color: black;
+	border-style:solid;
+	}
+	
+.bmi td, .bmi h1
+	{
+	font-weight:bold;
+	text-align:center;
+	color: black;
+	}
+h1
+	{
+	color:red;
+	}
+	
+h2
+	{
+	font-weight:bold;
+	color:Green;
+	}
+	
+body, form
+	{
+	font-size: 20px;
+	}

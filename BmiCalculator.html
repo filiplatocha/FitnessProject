@@ -1,0 +1,87 @@
+<!doctype html>
+
+<html>
+<head>
+	<link rel = "stylesheet" type = "text/css" href = "StylesPage.css">
+	
+	<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+	<script>
+	function bmi()
+	{
+		var weight = parseFloat(document.getElementById('weight').value);
+		var height = parseFloat(document.getElementById('height').value);
+		var bmi = (weight /(height * height)) * 703;
+		bmi = bmi.toFixed(2);
+		
+		$("#bmiResults").empty();
+		
+		if (bmi > 0 &&  bmi <= 18.5)
+		{
+			document.getElementById('bmiResults').value = bmi + "; You are underweight";
+		}
+		else if (bmi > 18.6 && bmi <= 24.9)
+		{
+			document.getElementById('bmiResults').value = bmi + "; You have normal weight.";
+		}
+		else if (bmi > 25.0 && bmi <= 29.9)
+		{
+			document.getElementById('bmiResults').value = bmi +  "; You are overweight.";
+		}
+		else if (bmi > 30.0)
+		{
+			document.getElementById('bmiResults').value = bmi +  "; You are obese.";
+		}
+		else
+		{
+			document.getElementById('bmiResults').value = "Invalid entry. Please fix your inputs.";
+		}
+	}
+	</script>
+	
+	<title>
+	BMI CAMCULATOR
+	</title>
+</head>
+
+<body>
+	<div class = "links">
+		<table>
+			<tr>
+				<th><a href = "Home.html">Home</a></th>
+				<th><a href = "RandWorkoutPlanner.html">Random Workout Planner</a></th>
+				<th><a href = "BmiCalculator.html">BMI Calculator</a></th>
+			</tr>
+		</table>
+	</div>
+	<div class = "bmi">
+	<h2>
+		BMI MEASURING SYSTEM
+	</h2>
+	<form>
+	<table>
+	<tr>
+		
+		<td>
+		Your weight:
+		<p><input type = "text" id = "weight"></p></td>
+		
+		<div class = "plus"><td><h1> + </h1><td></div>
+		
+		<td>
+		Your height in inches:
+		<p><input type = "text" id = "height"></p></td>
+		
+		<div class = "equals"><td><h1> = </h1></td></div>
+		
+		<td>Your BMI:
+		<p><input type = "text" id = "bmiResults", size = "40px"></p>
+		</td>
+	</tr>
+	</table>
+	</form>
+		<p><button type = "button" onClick = "bmi();"><h3>Calculate BMI!</h3></button></p>
+	</div>
+
+</body>
+</html>

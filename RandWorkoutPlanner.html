@@ -1,0 +1,150 @@
+<!doctype html>
+
+<html>
+<head>
+	<link rel = "stylesheet" type = "text/css" href = "StylesPage.css">
+	
+	<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+	<script>
+	function workout()
+	{
+	
+	var routines = ["Chest", "Shoulders", "Legs", "Back", "HIIT", "Chest/Core", "Shoulders/Core", "Arms"];
+	var styles = ["Satan Sets", "Bodybuilding", "Hypertrophy"]
+	
+	var monday = routines[Math.floor(Math.random()*routines.length)];
+	var tuesday = routines[Math.floor(Math.random()*routines.length)];
+	var wednesday = routines[Math.floor(Math.random()*routines.length)];
+	var thursday = routines[Math.floor(Math.random()*routines.length)];
+	var friday = routines[Math.floor(Math.random()*routines.length)];
+	var saturday = routines[Math.floor(Math.random()*routines.length)];
+	var sunday = routines[Math.floor(Math.random()*routines.length)];
+	
+	var mondayStyle = styles[Math.floor(Math.random()*styles.length)];
+	var tuesdayStyle = styles[Math.floor(Math.random()*styles.length)];
+	var wednesdayStyle = styles[Math.floor(Math.random()*styles.length)];
+	var thursdayStyle = styles[Math.floor(Math.random()*styles.length)];
+	var fridayStyle = styles[Math.floor(Math.random()*styles.length)];
+	var saturdayStyle = styles[Math.floor(Math.random()*styles.length)];
+	var sundayStyle = styles[Math.floor(Math.random()*styles.length)];
+	
+	$("#sundayRoutine").empty();
+	$("#mondayRoutine").empty();
+	$("#tuesdayRoutine").empty();
+	$("#wednesdayRoutine").empty();
+	$("#thursdayRoutine").empty();
+	$("#fridayRoutine").empty();
+	$("#saturdayRoutine").empty();
+	
+	var sundayRoutine = sunday + " //<br> " + sundayStyle;
+	var mondayRoutine = monday + " //<br> " + mondayStyle;
+	var tuesdayRoutine = tuesday + " //<br> " + tuesdayStyle;
+	var wednesdayRoutine = wednesday + " //<br> " + wednesdayStyle;
+	var thursdayRoutine = thursday + " //<br> " + thursdayStyle;
+	var fridayRoutine = friday + " //<br> " + fridayStyle;
+	var saturdayRoutine = saturday + " //<br> " + saturdayStyle;
+	
+	$("#sundayRoutine").append(sundayRoutine);
+	$("#mondayRoutine").append(mondayRoutine);
+	$("#tuesdayRoutine").append(tuesdayRoutine);
+	$("#wednesdayRoutine").append(wednesdayRoutine);
+	$("#thursdayRoutine").append(thursdayRoutine);
+	$("#fridayRoutine").append(fridayRoutine);
+	$("#saturdayRoutine").append(saturdayRoutine);
+	}
+	
+	<!-- requirements, analysis, design, and instruction. -->
+	<!-- reusability, extensibility, flexibility,  -->
+	<!-- expectations vs. perceptions-->
+	<!-- completeness, consistency, correctness -->
+	<!-- functional vs. non-functional requirement -->
+	<!-- validation vs. verification -->
+	<!-- inception, elaboration, construction, and transition : iterations -->
+	
+	
+	
+	
+	
+	
+	</script>
+	
+	<title>
+	RANDOM WORKOUT GENERATOR
+	</title>
+</head>
+
+<body>
+	<div class = "links">
+		<table>
+			<tr>
+				<th><a href = "Home.html">Home</a></th>
+				<th><a href = "RandWorkoutPlanner.html">Random Workout Planner</a></th>
+				<th><a href = "BmiCalculator.html">BMI Calculator</a></th>
+			</tr>
+		</table>
+	</div>
+
+	<div id = "heading">
+	<h2>
+		RANDOM WORKOUT GENERATOR
+	</h2>
+	
+	<button type = "genWorkout" onClick = "workout();"><h3>Generate Workout!</h3></button>
+	<br>
+	<br>
+	</div><!-- end of heading div -->
+	
+	<table>
+		<div id = "routine">
+		<tr> 
+			<th>Sunday</th>
+			<th>Monday</th>
+			<th>Tuesday</th>
+			<th>Wednesday</th>
+			<th>Thursday</th>
+			<th>Friday</th>
+			<th>Saturday</th>
+		</tr>
+		<tr>
+			<td id = "sundayRoutine"></td>
+		 
+			<td id = "mondayRoutine"></td>
+		
+			<td id = "tuesdayRoutine"></td>
+		 
+			<td id = "wednesdayRoutine"></td>
+		
+			<td id = "thursdayRoutine"></td>
+		
+			<td id = "fridayRoutine"></td>
+		
+			<td id = "saturdayRoutine"></td>
+		</tr>
+		</div> <!-- end of routine div -->
+	</table>
+	
+	<div id = "explanation">
+	<p>Bodybuilding:</p>
+	<ul> 
+		<li>5x5 (5 sets, 5 reps)</li>
+		<li>building weight each set (50%, 60%, 65%, 75%, and 80% of your max per exercise)</li>
+		<li>as many exercises as you want.</li>
+	</ul>
+	
+	<p>Hypertrophy:</p>
+	<ul>
+		<li>10x10 (10 sets, 10 reps)</li>
+		<li>low-weight exercises</li>
+		<li>as many exercises as you want.</li>
+	</ul>
+	<p>"Satan's Sets"</p>
+	<ul>
+		<li>6 x 6 x 6 (6 exercises, 6 sets, 6 reps)
+		<li>(55%, 65%, 75%, 80%, 85%, and 90% of your max per exercise)</li>
+	</ul>
+	</div>
+	
+	<br>
+</body>
+</html>
